@@ -27,7 +27,7 @@
     border-radius: 2px;
 }
 
-.home-page {
+.center-text {
     padding-top: 200px;
 }
 
@@ -47,22 +47,47 @@
     margin-top: 10px;
 }
 
-
-
-
-/* .title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  margin-top: 200px;
+.question-one {
+    width: 100%;
+    text-align: center;
 }
 
-.summary {
+.answers-one {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     flex-direction: column;
-    font-size: larger;
-    flex-basis: 400px;
-} */
+    align-items: center;
+    padding-top: 10px;
+}
+
+.answer-btn {
+    color: white;
+    font-size: medium;
+    background-color: var(--purple);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    margin-top: 10px;
+}
+
+
+.hidden {
+    display: flex;
+    justify-content: center;
+    color: #fcffa4;
+    border-top: 2px solid #fcffa4;
+    padding-top: 10px;
+    font-size: large;
+    font-style: italic;
+}
+
+.next {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    width: 100%;
+}
+
+#next-q {
+    font-size: 30px;
+}
