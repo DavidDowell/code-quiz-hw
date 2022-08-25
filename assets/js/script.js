@@ -3,7 +3,10 @@ var startScreenDivEl = $('#start-screen');
 var wrongBtnEl = $(".L");
 var correctBtnEl = $(".W");
 var timerEl = document.getElementById('time-left');
-var score = $("#final-score");
+var score = 0;
+var submitBtnEl = $("#sub");
+var initials= '';
+var initialVal = $("#initials")
 
 var questionClassArr = ['.hidden-1', '.hidden-2', '.hidden-3', '.hidden-4', '.hidden-5',]
 var Done = $(".hidden-6")
@@ -69,26 +72,38 @@ var allDone = function() {
 
 $(document).on('click', '.answer-btn', handleAnswerClick);
 
+submitBtnEl.on('click', function() {
+    initialVal = initialVal.value;
+    if (initialVal === null) {
+        console.log("no value entered")
+    } else {
+        var finalScore = {
+            initialVal: initials,
+            score: secondsleft
+        }
+        console.log(finalScore)
+        var allScores = localStorage.getItem('allScores')
+        if (allScores === null) {
+            allScores = []
+        } else {
+            allScores = JSON.parse("allScores")
+        }
+        allScores.push(finalScore);
+        var newScore = JSON.stringify("allScores");
+        localStorage.setItem("allScores", newScore);
+        window.location.replace("./score.html")
 
-var someVal = JSON.parse(localStorage.getItem('someName')) || [];
-someVal.push({
-    name: 'somename',
-    value: secondsleft,
-})
-localStorage.setItem('someName', JSON.stringify(someVal))
+    }
+});
 
-// var timeLeft = 90;
-// function countDown() {
 
-//     if (timeLeft >= 1) {
-//         timerEl.textContent = 'Time: ' + timeLeft;
-//         timeLeft--;
-//     } else {
-//         timerEl.textContent = 'GAME OVER'
-//         clearInterval(timerId)
-//     }
-//     localStorage.setItem("timeLeft", JSON.stringify(timeLeft));
-// };
+// var someVal = JSON.parse(localStorage.getItem('someName')) || [];
+// someVal.push({
+//     name: 'somename',
+//     value: secondsleft,
+// })
+// localStorage.setItem('someName', JSON.stringify(someVal))
+
 
 
 
