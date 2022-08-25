@@ -6,9 +6,10 @@ var timerEl = document.getElementById('time-left');
 var score = $("#final-score");
 
 var questionClassArr = ['.hidden-1', '.hidden-2', '.hidden-3', '.hidden-4', '.hidden-5',]
+var Done = $(".hidden-6")
 var questionIndex = 0;
 
-var secondsleft = 90;
+var secondsleft = 80;
 var holdInterval = 0;
 var penalty = 10;
 var reward = 5
@@ -22,7 +23,6 @@ startQuizEl.on("click", function () {
                 if (secondsleft <= 0) {
                     clearInterval(holdInterval)
                     console.log('done')
-                    // allDone();
                     timerEl.textContent = "GAME OVER!"
                 }
         }, 1000);
@@ -42,7 +42,6 @@ var handleAnswerClick = (event) => {
     if (value !== 'true') {
         console.log('secondsleft', secondsleft)
         secondsleft = secondsleft - 10;
-
         // tell user they are wrong
 
     } else {
@@ -57,10 +56,16 @@ var handleAnswerClick = (event) => {
         console.log('end quiz', secondsleft);
         timerEl.textContent = "Time: " + secondsleft;
         clearInterval(holdInterval)
+        allDone();
+
         return
     }
     displayQuestion();
 };
+
+var allDone = function() {
+    Done.removeClass('hidden');
+}
 
 $(document).on('click', '.answer-btn', handleAnswerClick);
 
@@ -86,23 +91,5 @@ localStorage.setItem('someName', JSON.stringify(someVal))
 // };
 
 
-function showWrong(event) {
-    var wrongBtnEl = $(event.target);
-    wrongBtnEl.append(
-        "<h4 class='hidden'>Wrong!</h4>"
-    );
 
-}
-
-function showRight(event) {
-    var correctBtnEl = $(event.target);
-    correctBtnEl.append(
-        "<h4 class='hidden'>Correct!</h4>"
-    );
-};
-
-
-
-wrongBtnEl.on("click", showWrong);
-correctBtnEl.on("click", showRight);
 

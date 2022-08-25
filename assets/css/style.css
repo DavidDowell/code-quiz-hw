@@ -36,6 +36,20 @@
     margin-bottom: 30px;
 }
 
+.feedback-1 {
+    display: block;
+    text-align: center;
+    color: blue;
+    border-top: 1px dotted blue;
+}
+
+.feedback-1 {
+    display: block;
+    text-align: center;
+    color: blue;
+    border-top: 1px dotted blue;
+}
+
 /* .center-text-1 {
     padding-top: 200px;
     margin-bottom: 30px;
