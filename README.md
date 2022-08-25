@@ -12,4 +12,7 @@
 ## WHEN the game is over
 ## THEN I can save my initials and score
 
+* https://github.com/DavidDowell/code-quiz-hw
+* https://daviddowell.github.io/code-quiz-hw/
+
 ![04-web-apis-homework-demo](https://user-images.githubusercontent.com/109549420/186231442-be55d6a6-ef65-4c54-9a44-acc84803ce65.gif)
