@@ -15,10 +15,10 @@
             <a href="">View Highscores</a>
         </div>
         <div class="time-limit">
-            <p>Time:  </p>
+            <p id="time-left"></p>
         </div>
     </div>
-    <div class="center-text">
+    <div id="start-screen" class="center-text">
         <div class="title">
             <h1><b>Coding Quiz Challenge</b></h1>
             <div class="summary">
@@ -29,6 +29,89 @@
         </div>
 
     </div>
+    <div class="center-text hidden-1 hidden">
+        <div class="question-one">
+            <h1><b>Which of these is not a primitive data type in JavaScript?</b></h1>
+        </div>
+        <div class="answers-one">
+            <button class="answer-btn L"  value="false">1. String</button>
+            <button class="answer-btn L"  value="false">2. Boolean</button>
+            <button class="answer-btn W"  value="true">3. method</button>
+            <button class="answer-btn L"  value="false">4. Number</button>
+            <div>
+                <h4 class="feedback"></h4>
+            </div>
+        </div>
+        
+        <!-- <div class="next">
+            <button id="next-q" class="answer-btn">Next ➡</h4>
+        </div> -->
+    </div>
+
+    <div class="center-text hidden-2 hidden">
+        <div class="question-one">
+            <h1><b>What is the correct way to write an if statement in JavaScript?</b></h1>
+        </div>
+        <div class="answers-one">
+            <button class="answer-btn L"  value="false"> 1. if i === 5 then</button>
+            <button class="answer-btn W"  value="true">2. if (i == 5)</button>
+            <button class="answer-btn L"  value="false">3. if i = 5</button>
+            <button class="answer-btn L"  value="false">4. if i = 5 then</button>
+        </div>
+    </div>
+
+    <div class="center-text hidden-3 hidden">
+        <div class="question-one">
+            <h1><b>What is the correct way to write a JavaScript array?</b></h1>
+        </div>
+        <div class="answers-one">
+            <button class="answer-btn L"  value="false">1. var cars = ("suv, truck, sedan")</button>
+            <button class="answer-btn L"  value="false">2. var cars = "suv", "truck", "sedan"</button>
+            <button class="answer-btn L"  value="false">3. var cars = 1:suv 2:truck 3:sedan</button>
+            <button class="answer-btn W"  value="true">4. var cars = ["suv", "truck", "sedan"]</button>
+        </div>
+    </div>
+
+    <div class="center-text hidden-4 hidden">
+        <div class="question-one">
+            <h1><b>What is a property of an object that contains a function definition?</b></h1>
+        </div>
+        <div class="answers-one">
+            <button class="answer-btn W"  value="true">1. method</button>
+            <button class="answer-btn L"  value="false">2. dot notation</button>
+            <button class="answer-btn L"  value="false">3. for loop</button>
+            <button class="answer-btn L"  value="false">4. if/else statement</button>
+        </div>
+    </div>
+
+    <div class="center-text hidden-5 hidden">
+        <div class="question-one">
+            <h1><b>What is not one of the parameters of a for loop?</b></h1>
+        </div>
+        <div class="answers-one">
+            <button class="answer-btn L"  value="false">1. initiator</button>
+            <button class="answer-btn L"  value="false">2. condition</button>
+            <button class="answer-btn W"  value="true">3. string</button>
+            <button class="answer-btn L"  value="false">4. iterator</button>
+        </div>
+    </div>
+
+    <!-- <div class="center-text-6 hidden-6 hidden ">
+        <button id="next-q">Next ➡</button>
+    </div> -->
+
+    <div class="center-text hidden-6 hidden">
+        <h1>All done!</h1>
+        <h4 id="final-score"></h4>
+        <div class="submit">
+            <form>
+                <label for="ent-initial">Enter initials:</label>
+                <input type="text" value="">
+                <input type="submit" class="answer-btn" value="submit">
+            </form>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
